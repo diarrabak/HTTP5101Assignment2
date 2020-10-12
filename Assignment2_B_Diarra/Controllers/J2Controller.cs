@@ -23,15 +23,21 @@ namespace Assignment2_B_Diarra.Controllers
         
         public string GetDiceGame(int m, int n)
         {
-            int GuestValue = 10;               //Value to be met by the sum of m + n
+            //Variable taking the value to be met by the sum of m + n
+            int GuestValue = 10;     
+            //Variable counting the number 10 obtained
             int occurence = 0;
-            for (int i = 1; i <= m; i++)       //Loop on m
+
+            //Loop on the two dice m and n
+            for (int i = 1; i <= m; i++)      
             {
                 for (int j = 1; j <= n; j++)
                 {
-                    if((i+j)== GuestValue)     //Check the sum is equal to 10
-                    { 
-                        occurence += 1;        // Increment the number of occurence of 10
+                    //Check the sum is equal to 10
+                    if ((i+j)== GuestValue)     
+                    {
+                        // Increment the number of occurence of 10
+                        occurence += 1;        
                     }
                 }
             }
