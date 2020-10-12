@@ -11,14 +11,16 @@ namespace Assignment2_B_Diarra.Controllers
     {
         /// <summary>
         /// This method takes two integers representing the faces of two dice and returns the number of time the sum of the faces of the two dices gives 10. 
-        /// <example> GET api/J2/DiceGame/6/8 </example>
+        /// <example> GET api/J2/DiceGame/6/8  -->returns 5</example>
+        /// <example> GET api/J2/DiceGame/12/4 -->returns 4</example>
+        /// <example> GET api/J2/DiceGame/4/4  -->returns 0</example>
         /// </summary>
         /// <param name="m">face number of the first die</param>
         /// <param name="n">face number of the second die</param>
         /// <returns>There are 5 total ways to get the sum 10. </returns>
-        /// 
+        
         [Route("api/J2/DiceGame/{m}/{n}")]
-        // GET api/J2/DiceGame/6/8
+        
         public string GetDiceGame(int m, int n)
         {
             int GuestValue = 10;               //Value to be met by the sum of m + n
@@ -33,7 +35,8 @@ namespace Assignment2_B_Diarra.Controllers
                     }
                 }
             }
-            return "There are " + occurence + " total ways to get the sum 10. "; //Message indicating the number of ways we can get 10.
+            //Message indicating the number of ways we can get 10.
+            return "There are " + occurence + " total ways to get the sum 10. "; 
         }
     }
 }
